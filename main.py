@@ -33,7 +33,18 @@ Resonance 3.32
 
 
 playlist_f = (
-	{"Free Bird": 9.08, "Enter Sandman": 5.31, "One" : 7.45, "Sliver" : 2.10, "Come as You Are": 3.45},
+	{
+        "Free Bird": 9.08, 
+        "Enter Sandman": 5.31, "One" : 7.45, "Sliver" : 2.10, "Come as You Are": 3.45},
 	{"Thunderstruck": 4.53, "You Shook Me All Night Long": 3.29, "Everlong" : 4.51, "My Hero" : 4.02},
 )
 
+#решение
+from random import sample
+
+def get_random_pairs(playlist,n):
+    music = {**playlist[0],**playlist[1]}
+    return sample(music.items(),n) 
+
+
+print(get_random_pairs(playlist_f,3))
