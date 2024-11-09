@@ -75,10 +75,7 @@ def playingtime(playlist, n):
         playlist_dict = dict()
         for i in range(len(playlist[0])):
             playlist_dict[playlist[0][i]] = playlist[1][i]
-        names = sample(list(playlist_dict.keys()), n)
-        for i in names:
-            time += playlist_dict[i]
-    return time
+       
 
 print(playingtime(playlist_f,3))
 
